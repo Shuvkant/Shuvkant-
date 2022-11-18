@@ -1,0 +1,90 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/*removing defaults styles for navigation*/
+.navbar ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.navbar a {
+	text-decoration: none;
+}
+.navbar a:visited {
+	color: inherit;
+}
+.navbar a:active {
+	color: inherit;
+}
+.navbar a:link {
+	color: inherit;
+}
+
+/********Logo and navigation bar************/
+.navbar {
+	margin-top: 16px;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.navbar .nav-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 48px;
+}
+.navbar .nav-link li a::after {
+	 content:'';
+	 width:0%;
+	 height:2px;
+	 background: green;
+	 display: block;
+	 margin: auto;
+	 transition: 0.5s;
+}
+.navbar .nav-link li a:hover::after{
+    width: 100%;
+}
+.navbar .navbar-logo {
+	color: black;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+}
+.navbar .navbar-logo img{
+	width: 48px;
+}
+
+@media (max-width: 800px) {
+	.navbar {
+		flex-direction: column;
+		gap: 16px;
+	}
+	.navbar .nav-link {
+		flex-direction: column;
+		gap: 16px;
+	}
+}
+
+/******logo and navigation end********/
+
+/*********About us**********/
+.about {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.about header {
+	font-size: 24px;
+	text-decoration: underline;
+}
+.about p {
+	width: 70%;
+	text-align: center;
+}
